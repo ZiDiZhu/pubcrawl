@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+    color: hotpink;
+}
+
+.container {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header .logo {
+    max-width: 200px;
+    height: auto;
+}
+
+.band-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.band-members a {
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.band-members a:hover {
+    background-color: #333;
+    color: #fff;
+}
