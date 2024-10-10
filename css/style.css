@@ -1,18 +1,17 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: 'Open Sans', sans-serif;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     min-height: 100vh;
     background-color: #f0f0f0;
     color: hotpink;
+}
+
+iframe{
+    width: 50%;
+    height: 80vh;
+    border:none;
 }
 
 .container {
@@ -21,6 +20,7 @@ body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
