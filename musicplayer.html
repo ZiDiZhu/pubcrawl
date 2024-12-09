@@ -4,72 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player</title>
-  <style>
-    .container {
-      max-width: 1000px;
-      background-color: #fff;
-      border-radius: 8px;
-      padding: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-    .album {
-      display: inline-block;
-      width: 150px;
-      margin: 10px;
-      text-align: center;
-      cursor: pointer;
-    }
-    .album img {
-      width: 100%;
-      border-radius: 8px;
-    }
-    .album-name {
-      margin-top: 10px;
-      font-size: 16px;
-    }
-    .player {
-      margin-top: 30px;
-      display: none;
-    }
-    audio {
-      width: 100%;
-      margin-top: 20px;
-    }
-    .lyrics {
-      margin-top: 20px;
-      white-space: pre-line;
-      font-size: 14px;
-      background-color: #f9f9f9;
-      padding: 10px;
-      border-radius: 5px;
-    }
-    .song {
-      margin-top: 10px;
-      cursor: pointer;
-      padding: 10px;
-      background-color: #e0e0e0;
-      border-radius: 5px;
-    }
-    .song:hover {
-      background-color: #ccc;
-    }
-    .song-name {
-      font-size: 18px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/musicPlayer.css">
+  <script src="scripts/albumData.js"></script>
 </head>
 <body>
 
 <div class="container">
   <!-- Album Section -->
-  <div id="albums">
-    <div class="album" onclick="loadAlbum('pubCrawl', 'albums/pubCrawl/pubcrawl.png', songsAlbum1)">
+  <div id="albums" style="display: inline-block">
+
+    <div class="album" onclick="loadAlbum(Dec5th.title, Dec5th.cover, Dec5th.songs);">
       <img src="albums/pubCrawl/pubcrawl.png" alt="Album 1 Cover">
-      <div class="album-name">pubCrawl</div>
-    </div>
-    <div class="album" onclick="loadAlbum('Remembrance of Mars\' Past', 'albums/remembranceOfMarsPast/MarsPast.png', songsAlbum2)">
-      <img src="albums/remembranceOfMarsPast/MarsPast.png" alt="Album 2 Cover">
-      <div class="album-name">Remembrance of Mars' Past</div>
+      <div class="album-name">dec 5th</div>
     </div>
   </div>
 
@@ -90,20 +36,10 @@
 </div>
 
 <script>
-  // Example song data
-  const songsAlbum1 = [
-    { name: "we're pub crawl", src: "song1.mp3", lyricsFile: "albums/pubCrawl/lyrics/pubcrawl.txt" },
-    { name: "8800-blue-lick-rd", src: "song2.mp3", lyricsFile: "albums/pubCrawl/lyrics/8800BLR.txt" }
-  ];
-  const songsAlbum2 = [
-    { name: "fingernail crud", src: "albums/remembranceOfMarsPast/audio/fingernailcrud_demo0.2.wav", lyricsFile: "albums/remembranceOfMarsPast/lyrics/fingerNailCrud.txt" }
-  ];
-
 
   function loadAlbum(albumName, albumCover, songs) {
     // Show player
     document.getElementById('player').style.display = 'block';
-
     // Update album info
     document.getElementById('albumTitle').innerText = albumName;
     document.getElementById('albumCover').src = albumCover;
@@ -130,16 +66,18 @@
 
     // Fetch and display lyrics from the txt file
     const lyricsDiv = document.getElementById('lyrics');
-    fetch(song.lyricsFile)
-            .then(response => response.text())
-            .then(text => {
-              lyricsDiv.innerText = text;
-            })
-            .catch(error => {
-              lyricsDiv.innerText = "Lyrics not available.";
-            });
-  }
+    if(song.lyricsFile){
+      fetch(song.lyricsFile)
+              .then(response => response.text())
+              .then(text => {
+                lyricsDiv.innerText = text;
+              })
+              .catch(error => {
+                lyricsDiv.innerText = "Lyrics not available.";
+              });
+    }
 
+  }
 
 </script>
 </body>
