@@ -34,24 +34,17 @@ const misc_pub = {
 
 
 const misc_crawl = {
-    title: "December 5th",
+    title: "Miscellaneous Crawl",
     cover:"albums/pubCrawl/pubcrawl.png",
     songs: [
-        { name: "aMidnightMystery", src: "albums/dec5th/audio/aMidnightMistery.wav"},
-        { name: "badChildhood", src: "albums/dec5th/audio/badChildhood.wav"},
-        { name: "BellaTheSleepyCat/", src: "albums/dec5th/audio/BellaTheSleepyCat.wav"},
-        { name: "blesser", src: "albums/dec5th/audio/blesser.wav"},
-        { name: "catheaebve", src: "albums/dec5th/audio/catheaebve.wav"},
-        { name: "chalkonthegorillaglass", src: "albums/dec5th/audio/chalkonthegorillaglass.wav"},
-        { name: "computerstym", src: "albums/dec5th/audio/computerstym.wav"},
-        { name: "/Dec5th/", src:"albums/dec5th/audio/Dec5th.wav"},
-        { name: "grop", src: "albums/dec5th/audio/grop.wav"},
-        { name: "horizonagain", src: "albums/dec5th/audio/horizonagain.wav"},
-        { name: "jam_ihavelyricsinmyhead", src:"albums/dec5th/audio/jam_ihavelyricsinmyhead.wav"},
-        { name: "shitasshead", src: "albums/dec5th/audio/shitasshead.wav"},
-        { name: "/SunRoom", src: "albums/dec5th/audio/SunRoom.wav"},
-        { name: "StarrySky", src: "albums/dec5th/audio/StarrySky.wav"},
-        { name: "Wasted", src: "albums/dec5th/audio/Wasted.wav"}
+        { name: "blue_moon_apartment.wav", src: "albums/misc_crawl/blue_moon_apartment.wav"},
+        { name: "BurbSkatePark.wav", src: "albums/misc_crawl/BurbSkatePark.wav"},
+        { name: "cursed_well.wav", src: "albums/misc_crawl/cursed_well.wav"},
+        { name: "enchanted_well.wav", src: "albums/misc_crawl/enchanted_well.wav"},
+        { name: "ring_tunnel.wav", src: "albums/misc_crawl/ring_tunnel.wav"},
+        { name: "subglacial_cat.wav", src: "albums/misc_crawl/subglacial_cat.wav"},
+        { name: "subglacial_lake.wav", src: "albums/misc_crawl/subglacial_lake.wav"},
+        { name: "water_world.wav", src:"albums/misc_crawl/water_world.wav"}
     ]
 };
 
