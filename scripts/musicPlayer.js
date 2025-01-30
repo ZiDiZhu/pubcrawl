@@ -35,6 +35,10 @@ function loadAlbum(albumName, albumCover, songs, item) {
 function clearSongs(){
     document.getElementById('player').style.display = 'none';
     document.getElementById('songs').innerHTML = '';
+    var albums = document.getElementsByClassName('album');
+    for(var i=0; i<albums.length; i++){
+        albums[i].style.border = 'none';
+    }
 }
 
 function getRandomColor() {
