@@ -12,6 +12,7 @@
 <body>
 
 <div id="musicPlayer">
+  <h2 id="song-title">********</h2>
   <audio id="audioPlayer" controls>
     <source id="audioSource" src="" type="audio/mp3">
     Your browser does not support the audio element.
@@ -19,17 +20,17 @@
 </div>
 <div id="albums" style="display: inline-block">
 
-  <div class="album" onclick="loadAlbum(Dec5th.title, Dec5th.cover, Dec5th.songs);">
+  <div class="album" onclick="loadAlbum(Dec5th.title, Dec5th.cover, Dec5th.songs,this);">
     <img src="albums/pubCrawl/pubcrawl.png" alt="Album 1 Cover">
     <div class="album-name">dec 5th</div>
   </div>
 
-  <div class="album" onclick="loadAlbum(misc_pub.title, misc_pub.cover, misc_pub.songs);">
+  <div class="album" onclick="loadAlbum(misc_pub.title, misc_pub.cover, misc_pub.songs,this);">
     <img src="albums/pubCrawl/pubcrawl.png" alt="Album 2 Cover">
     <div class="album-name">misc. pub</div>
   </div>
 
-  <div class="album" onclick="loadAlbum(misc_crawl.title, misc_crawl.cover, misc_crawl.songs);">
+  <div class="album" onclick="loadAlbum(misc_crawl.title, misc_crawl.cover, misc_crawl.songs,this);">
     <img src="albums/pubCrawl/pubcrawl.png" alt="Album 2 Cover">
     <div class="album-name">misc. crawl</div>
   </div>

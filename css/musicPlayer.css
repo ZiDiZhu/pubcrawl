@@ -33,10 +33,10 @@ body{
 }
 audio {
     width: 100%;
-    margin-top: 20px;
 }
+
 audio::-webkit-media-controls-panel {
-    background-color: #bba1ec;
+    background-color: #f2ffdc;
 }
 
 .lyrics {
@@ -64,4 +64,5 @@ audio::-webkit-media-controls-panel {
 #musicPlayer{
     top: 0;
     position: sticky;
+    background-color: #302c37;
 }

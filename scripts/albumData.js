@@ -25,7 +25,6 @@ const misc_pub = {
     cover:"albums/pubCrawl/pubcrawl.png",
     songs: [
         { name: "9-11_demonovocalsv1.wav", src: "albums/misc_pub/9-11_demonovocalsv1.wav"},
-        { name: "Cripple Creek.wav", src: "albums/misc_pub/Cripple Creek.wav"},
         { name: "fingernailcrud_demo0.2.wav", src: "albums/misc_pub/fingernailcrud_demo0.2.wav"},
         { name: "typscrep.wav", src: "albums/misc_pub/typscrep.wav"},
         { name: "woopdoo_EARLYvocldemo0.wav", src: "albums/misc_pub/woopdoo_EARLYvocldemo0.wav"}
