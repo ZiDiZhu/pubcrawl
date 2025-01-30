@@ -1,9 +1,9 @@
 body {
-    font-family: 'Open Sans', sans-serif;
     text-align: center;
     min-height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #302c37;
     color: hotpink;
+    font-family: AppleGaramond, serif;
 }
 
 iframe{
@@ -36,11 +36,11 @@ header .logo {
 }
 
 .band-members a {
-    color: #333;
+    color: #cba1ff;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .band-members a:hover {
-    background-color: #333;
+    background-color: #7200ff;
     color: #fff;
 }

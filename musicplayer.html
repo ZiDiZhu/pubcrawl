@@ -4,80 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Music Player</title>
+  <link rel="stylesheet" href="css/fonts.css">
   <link rel="stylesheet" href="css/musicPlayer.css">
   <script src="scripts/albumData.js"></script>
+  <script src="scripts/musicPlayer.js"></script>
 </head>
 <body>
 
-<div class="container">
-  <!-- Album Section -->
-  <div id="albums" style="display: inline-block">
+<div id="musicPlayer">
+  <audio id="audioPlayer" controls>
+    <source id="audioSource" src="" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+</div>
+<div id="albums" style="display: inline-block">
 
-    <div class="album" onclick="loadAlbum(Dec5th.title, Dec5th.cover, Dec5th.songs);">
-      <img src="albums/pubCrawl/pubcrawl.png" alt="Album 1 Cover">
-      <div class="album-name">dec 5th</div>
-    </div>
+  <div class="album" onclick="loadAlbum(Dec5th.title, Dec5th.cover, Dec5th.songs);">
+    <img src="albums/pubCrawl/pubcrawl.png" alt="Album 1 Cover">
+    <div class="album-name">dec 5th</div>
   </div>
+</div>
 
-  <!-- Player Section -->
-  <div class="player" id="player">
-    <img id="albumCover" src="" alt="Album Cover" style="width:150px; border-radius: 8px;">
-    <h2 id="albumTitle"></h2>
+<!-- Player Section -->
+<div class="player" id="player">
+  <h2 id="albumTitle"></h2>
 
-    <div id="songs"></div>
+  <div id="songs"></div>
 
-    <audio id="audioPlayer" controls>
-      <source id="audioSource" src="" type="audio/mp3">
-      Your browser does not support the audio element.
-    </audio>
-
-    <div class="lyrics" id="lyrics"></div>
-  </div>
+  <div class="lyrics" id="lyrics"></div>
+</div>
 </div>
 
 <script>
 
-  function loadAlbum(albumName, albumCover, songs) {
-    // Show player
-    document.getElementById('player').style.display = 'block';
-    // Update album info
-    document.getElementById('albumTitle').innerText = albumName;
-    document.getElementById('albumCover').src = albumCover;
-
-    // Load songs
-    const songsContainer = document.getElementById('songs');
-    songsContainer.innerHTML = ''; // Clear previous songs
-    songs.forEach((song, index) => {
-      const songDiv = document.createElement('div');
-      songDiv.className = 'song';
-      songDiv.onclick = () => loadSong(song);
-      songDiv.innerHTML = `<div class="song-name">${song.name}</div>`;
-      songsContainer.appendChild(songDiv);
-    });
-  }
-
-  function loadSong(song) {
-    // Update audio source
-    const audioPlayer = document.getElementById('audioPlayer');
-    const audioSource = document.getElementById('audioSource');
-    audioSource.src = song.src;
-    audioPlayer.load(); // Reload the audio element
-    audioPlayer.play();
-
-    // Fetch and display lyrics from the txt file
-    const lyricsDiv = document.getElementById('lyrics');
-    if(song.lyricsFile){
-      fetch(song.lyricsFile)
-              .then(response => response.text())
-              .then(text => {
-                lyricsDiv.innerText = text;
-              })
-              .catch(error => {
-                lyricsDiv.innerText = "Lyrics not available.";
-              });
-    }
-
-  }
 
 </script>
 </body>

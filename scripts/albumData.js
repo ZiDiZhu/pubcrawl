@@ -10,6 +10,7 @@ const Dec5th = {
         { name: "chalkonthegorillaglass", src: "albums/dec5th/audio/chalkonthegorillaglass.wav"},
         { name: "computerstym", src: "albums/dec5th/audio/computerstym.wav"},
         { name: "/Dec5th/", src:"albums/dec5th/audio/Dec5th.wav"},
+        { name: "grop", src: "albums/dec5th/audio/grop.wav"},
         { name: "horizonagain", src: "albums/dec5th/audio/horizonagain.wav"},
         { name: "jam_ihavelyricsinmyhead", src:"albums/dec5th/audio/jam_ihavelyricsinmyhead.wav"},
         { name: "shitasshead", src: "albums/dec5th/audio/shitasshead.wav"},
