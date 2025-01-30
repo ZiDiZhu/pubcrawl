@@ -4,6 +4,7 @@ body {
     background-color: #302c37;
     color: hotpink;
     font-family: AppleGaramond, serif;
+    font-size: large;
 }
 
 iframe{
@@ -30,9 +31,7 @@ header .logo {
 }
 
 .band-members {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    display: inline-flex;
 }
 
 .band-members a {

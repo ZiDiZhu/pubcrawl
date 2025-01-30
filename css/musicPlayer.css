@@ -7,11 +7,18 @@ body{
 .album {
     display: inline-block;
     width: 150px;
+    height: 150px;
     margin: 10px;
     text-align: center;
     vertical-align: top;
     cursor: pointer;
 }
+
+.album:hover {
+    color: #b9ff13;
+    border-radius: 5px;
+}
+
 .album img {
     width: 100%;
     border-radius: 8px;
@@ -28,6 +35,10 @@ audio {
     width: 100%;
     margin-top: 20px;
 }
+audio::-webkit-media-controls-panel {
+    background-color: #bba1ec;
+}
+
 .lyrics {
     margin-top: 20px;
     white-space: pre-line;
