@@ -1,7 +1,7 @@
 const Dec5th = {
     title: "December 5th",
     cover:"albums/pubCrawl/pubcrawl.png",
-    songs: [
+    tracks: [
         { name: "aMidnightMystery", src: "albums/dec5th/audio/aMidnightMistery.wav"},
         { name: "badChildhood", src: "albums/dec5th/audio/badChildhood.wav"},
         { name: "BellaTheSleepyCat/", src: "albums/dec5th/audio/BellaTheSleepyCat.wav"},
@@ -23,7 +23,7 @@ const Dec5th = {
 const misc_pub = {
     title: "Miscellaneous Pub",
     cover:"albums/pubCrawl/pubcrawl.png",
-    songs: [
+    tracks: [
         { name: "9-11_demonovocalsv1.wav", src: "albums/misc_pub/9-11_demonovocalsv1.wav"},
         { name: "fingernailcrud_demo0.2.wav", src: "albums/misc_pub/fingernailcrud_demo0.2.wav"},
         { name: "typscrep.wav", src: "albums/misc_pub/typscrep.wav"},
@@ -31,11 +31,10 @@ const misc_pub = {
     ]
 };
 
-
 const misc_crawl = {
     title: "Miscellaneous Crawl",
     cover:"albums/pubCrawl/pubcrawl.png",
-    songs: [
+    tracks: [
         { name: "blue_moon_apartment.wav", src: "albums/misc_crawl/blue_moon_apartment.wav"},
         { name: "BurbSkatePark.wav", src: "albums/misc_crawl/BurbSkatePark.wav"},
         { name: "cursed_well.wav", src: "albums/misc_crawl/cursed_well.wav"},

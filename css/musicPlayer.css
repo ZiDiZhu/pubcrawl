@@ -4,10 +4,33 @@ body{
     color: #cba1ff;
 }
 
+/* WebKit-based browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+    height: 12px; /* Height for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #b9ff13; /* Color of the scrollbar thumb */
+    border-radius: 6px; /* Rounded corners */
+    border: 3px solid #302c37; /* Adds padding around the thumb */
+}
+
+::-webkit-scrollbar-track {
+    background-color: #302c37; /* Color of the scrollbar track */
+    border-radius: 6px;
+}
+
+/* Modern browsers */
+* {
+    scrollbar-color: #b9ff13 #302c37; /* Thumb color and track color */
+    scrollbar-width: thin; /* Thin scrollbar */
+}
+
 .album {
     display: inline-block;
     width: 150px;
-    height: 150px;
+    height: 200px;
     margin: 10px;
     text-align: center;
     vertical-align: top;
@@ -35,8 +58,28 @@ audio {
     width: 100%;
 }
 
+
+audio::-webkit-media-controls-enclosure {
+    width:100%;
+    background-color:transparent;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    -webkit-text-fill-color: #b9ff13;
+    border-radius: 1px;
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color: #b9ff13;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
 audio::-webkit-media-controls-panel {
-    background-color: #f2ffdc;
+    height:45px;
 }
 
 .lyrics {
@@ -47,22 +90,58 @@ audio::-webkit-media-controls-panel {
     padding: 10px;
     border-radius: 5px;
 }
-.song {
+.track {
     margin-top: 10px;
     cursor: pointer;
     padding: 10px;
-    background-color: #e0e0e0;
+    border: none;
     border-radius: 5px;
+    text-align: right;
 }
-.song:hover {
-    background-color: #ccc;
+.track:hover {
+    border: #b9ff13 1px solid;
 }
-.song-name {
+.albumTrackTitle {
     font-size: 18px;
+}
+
+#trackTitle {
+    color: #b9ff13;
 }
 
 #musicPlayer{
     top: 0;
     position: sticky;
     background-color: #302c37;
+}
+
+#queue {
+    background-color: rgba(0, 4, 255, 0.73);
+    cursor: grab;
+    position: sticky;
+    width: max-content;
+    top: 150px;
+}
+
+#queue:active {
+    cursor: grabbing;
+}
+
+.cancel-button{
+    background-color: pink;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.queue-track{
+    display: inline;
+}
+
+.clearQueueButton {
+    display: none;
+}
+
+.showQueueButton {
+    display: none;
 }
