@@ -1,7 +1,9 @@
 body {
-    text-align: center;
-    min-height: 100vh;
+    text-align: right;
+    min-height: 80vh;
     background-color: #302c37;
+    background-image: url('../images/pubCrawlPosterA4.png');
+    background-size: clamp(70%, 100%, 120%);
     color: hotpink;
     font-family: AppleGaramond, serif;
     font-size: large;
@@ -14,20 +16,14 @@ iframe{
 }
 
 .container {
-    text-align: center;
+    text-align: right;
 }
 
 header {
+    text-align: right;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 20px;
-}
-
-header .logo {
-    max-width: 200px;
-    height: auto;
 }
 
 .band-members {

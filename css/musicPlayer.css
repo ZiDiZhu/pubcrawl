@@ -1,5 +1,5 @@
 body{
-    background-repeat: repeat;
+    background-color: rgba(48, 44, 55, 0.93);
     font-family: AppleGaramond, serif;
     color: #cba1ff;
 }
@@ -118,9 +118,7 @@ audio::-webkit-media-controls-panel {
 #queue {
     background-color: rgba(0, 4, 255, 0.73);
     cursor: grab;
-    position: sticky;
     width: max-content;
-    top: 150px;
 }
 
 #queue:active {

@@ -21,6 +21,16 @@
     Your browser does not support the audio element.
   </audio>
 </div>
+
+
+<div id="queue">
+  <h2 id="queueHeader" style="display: none">Queue</h2>
+  <button id="clearQueueButton" onclick="clearQueue()" style="display: none">Clear Queue</button>
+  <div id="queuebox">
+    <p></p>
+  </div>
+</div>
+
 <div id="albums" style="display: inline-block">
 
   <div class="album" onclick="loadAlbum(Dec5th.title, Dec5th.cover, Dec5th.tracks,this);">
@@ -40,13 +50,6 @@
 
 </div>
 
-<div id="queue">
-  <h2 id="queueHeader" style="display: none">Queue</h2>
-  <button id="clearQueueButton" onclick="clearQueue()" style="display: none">Clear Queue</button>
-  <div id="queuebox">
-    <p></p>
-  </div>
-</div>
 <!-- Player Section -->
 <div class="player" id="musicPlayerDiv">
   <h2 id="albumTitle"></h2>
